@@ -1,0 +1,27 @@
+{
+  "name": "WerteWandelN3xtcoder",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "node node_modules/eslint/bin/eslint.js ./src/*.js",
+    "elint": "eslint . — ext .js — ext .jsx — cache || true",
+    "elint:table": "eslint . — ext .js — ext .jsx — cache — format table || true",
+    "elint:summary": "eslint . — ext .js — ext .jsx — cache — format ‘node_modules/eslint-friendly-formatter’ || true"
+  },
+  "dependencies": {
+    "react": "15.3.2",
+    "react-native": "^0.34.0",
+    "react-native-image-picker": "^0.22.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.6.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "eslint-plugin-react-native": "^2.0.0"
+  }
+}
