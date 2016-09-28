@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, Image, View, Dimensions, TouchableHighlight, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, Image, Dimensions, TouchableHighlight } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 import SpinnerOverlay from './SpinnerOverlay';
 import OcrApi from './OcrApi';
-import ScanResultsScreen from './ScanResultsScreen';
 import ScreenWrapper from './ScreenWrapper';
 import { SCREENS } from './Navigation';
 
@@ -11,7 +10,7 @@ import { SCREENS } from './Navigation';
 import LogoImage from './res/Logo.png';
 import CameraIcon from './res/CameraIcon.png';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -58,8 +57,6 @@ const imagePickerOptions = {
   maxHeight: 1000,
 };
 
-// elo
-
 class HomeScreen extends Component {
 
   constructor(props) {
@@ -76,8 +73,8 @@ class HomeScreen extends Component {
         this.setState({ showSpinner: true });
       }
       OcrApi.getOcrResults(response.uri)
-        .then((resp) => {
-          resp.json().then((response) => {
+        .then((response) => {
+          response.json().then((response) => {
             this.setState({ showSpinner: false });
             this.props.navigator.push({ id: SCREENS.RESULTS, props: { result: response } });
           });

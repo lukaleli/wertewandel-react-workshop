@@ -1,6 +1,6 @@
 import Settings from './Settings';
 
-const endpoint = 'http://api.ocr.space/parse/image';
+const ENDPOINT = 'http://api.ocr.space/parse/image';
 
 const OcrApi = {
   getOcrResults: function (image) {
@@ -20,7 +20,7 @@ const OcrApi = {
         'Content-Type': 'multipart/form-data',
       },
     };
-    return fetch(endpoint, config);
+    return fetch(ENDPOINT, config);
   },
 };
 
