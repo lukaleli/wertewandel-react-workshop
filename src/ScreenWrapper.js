@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { Image, ToolbarAndroid, StyleSheet, Dimensions, Navigator } from 'react-native';
+import { Image, StyleSheet, Dimensions, Navigator } from 'react-native';
 
-import BackIcon from './res/BackIcon.png';
+import Toolbar from './Toolbar';
+
 import BackgroundImage from './res/HomeScreen.png';
 
 const { width } = Dimensions.get('window');
@@ -53,11 +54,10 @@ class ScreenWrapper extends Component {
     return (
       <Image source={BackgroundImage}
              style={[styles.container, this.props.style, {paddingTop: this.props.hasToolbar ? 60 : 0}]}>
-        {this.props.hasToolbar && <ToolbarAndroid style={styles.toolbar}
-                                                  navIcon={this.props.hasBackButton ? BackIcon : null}
-                                                  title={this.props.toolbarTitle}
-                                                  onIconClicked={this.onIconClicked}
-                                                  titleColor="white"/>}
+        {this.props.hasToolbar && <Toolbar style={styles.toolbar}
+                                           hasBackButton={this.props.hasBackButton}
+                                           title={this.props.toolbarTitle}
+                                           onBackButtonClick={this.onIconClicked} />}
         {this.props.children}
       </Image>
     );

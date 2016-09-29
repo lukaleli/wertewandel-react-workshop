@@ -87,14 +87,14 @@ class HomeScreen extends Component {
   render() {
     return (
       <ScreenWrapper hasToolbar={false} navigator={this.props.navigator} style={{alignItems: 'center'}}>
-        <Image source={LogoImage} style={styles.logo}/>
+        <Image source={LogoImage} style={styles.logo} />
         <Text style={styles.welcomeText}>Welcome on the N3xtcoder React Native workshop. The purpose of this workshop is
           to teach you how to capture a photo and scan it with OCR technology via remote http API.</Text>
         <TouchableHighlight onPress={this.onCameraButtonPress} style={styles.button} underlayColor="rgba(0, 0, 0, 0)">
           <Image source={CameraIcon} style={styles.buttonImage}/>
         </TouchableHighlight>
         <Text style={styles.buttonText}>Tap on the button to capture the photo</Text>
-        <SpinnerOverlay text="Working ..." show={this.state.showSpinner}/>
+        <SpinnerOverlay text="Working ..." show={this.state.showSpinner} />
       </ScreenWrapper>
     );
   }
