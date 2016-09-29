@@ -49,23 +49,15 @@ class ScreenWrapper extends Component {
     return true;
   }
 
-  renderToolbar() {
-    if (this.props.hasToolbar) {
-      return (<ToolbarAndroid style={styles.toolbar}
-                              navIcon={this.props.hasBackButton ? BackIcon : null}
-                              title={this.props.toolbarTitle}
-                              onIconClicked={this.onIconClicked}
-                              titleColor="white"/>);
-    } else {
-      return null;
-    }
-  }
-
   render() {
     return (
       <Image source={BackgroundImage}
              style={[styles.container, this.props.style, {paddingTop: this.props.hasToolbar ? 60 : 0}]}>
-        {this.renderToolbar()}
+        {this.props.hasToolbar && <ToolbarAndroid style={styles.toolbar}
+                                                  navIcon={this.props.hasBackButton ? BackIcon : null}
+                                                  title={this.props.toolbarTitle}
+                                                  onIconClicked={this.onIconClicked}
+                                                  titleColor="white"/>}
         {this.props.children}
       </Image>
     );
