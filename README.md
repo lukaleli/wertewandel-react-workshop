@@ -14,7 +14,7 @@ sudo npm install -g react-native-cli
 ```
 ### Android SDK (just SDK alone without Android Studio)
 [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
-### Set ```JAVA_HOME``` and ```ANDROID_HOME``` enviromental variables
+### Set ```JAVA_HOME``` and ```ANDROID_HOME``` environmental variables
 ```
 echo 'export JAVA_HOME=$(/usr/libexec/java_home)' >> ~/.bashrc
 echo 'export ANDROID_HOME=<PATH TO YOUR ANDROID SDK>' >> ~/.bashrc
@@ -31,7 +31,7 @@ cd wertewandel-react-workshop
 npm install
 ```
 ### Run project on android device or emulator
-Run Genymotion and start Android device instance or attach Android device via USB (make sure you have USB debugging enabled on the device [INSTRUCTIONS](https://www.google.com/search?q=android+Enable+USB+debugging)).
+Run Genymotion and start Android device instance or attach Android device via USB (make sure you have USB debugging enabled on the device >> [READ INSTRUCTIONS](https://www.google.com/search?q=android+Enable+USB+debugging)).
 Check if android device is available by running
 ```
 adb devices
