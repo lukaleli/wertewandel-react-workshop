@@ -31,6 +31,12 @@ cd wertewandel-react-workshop
 npm install
 ```
 ### Run project on android device or emulator
+Run Genymotion and start Android device instance or attach Android device via USB (make sure you have USB debugging enabled on the device [INSTRUCTIONS](https://www.google.com/search?q=android+Enable+USB+debugging)).
+Check if android device is available by running
+```
+adb devices
+```
+Install and launch app on the device/emulator
 ```
 react-native run-android
 ```
