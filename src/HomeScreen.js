@@ -4,7 +4,7 @@ import ImagePicker from 'react-native-image-picker';
 import SpinnerOverlay from './SpinnerOverlay';
 import OcrApi from './OcrApi';
 import ScreenWrapper from './ScreenWrapper';
-import { SCREENS } from './Navigation';
+import { SCREENS } from './Root';
 
 // Assets
 import LogoImage from './res/Logo.png';
